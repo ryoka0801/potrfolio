@@ -1,0 +1,25 @@
+.c-title {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.7;
+  display: inline-block;
+  position: relative;
+  color: $gray;
+  border-bottom: 1px solid #3D5A80;
+  @include breakpoint(tablet){
+    font-size: 24px;
+  }
+  @include breakpoint(pc){
+    font-size: 32px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1em;
+    left: 0;
+    font-size: 10px;
+    @include breakpoint(pc){
+      font-size: 14px;
+    }
+  }
+}

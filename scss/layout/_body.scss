@@ -1,0 +1,8 @@
+body {
+  display: grid;
+  grid-template-rows: 55.2vw auto 40px;
+  grid-template-columns: 45px calc(100vw - 45px);
+  @include breakpoint(pc){
+    grid-template-columns: 150px calc(100vw - 150px);
+  }
+}

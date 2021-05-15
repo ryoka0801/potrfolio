@@ -1,0 +1,107 @@
+.p-contact{
+  &__title::after{
+    content: "Contact";
+    color: $blue;
+  }
+  &__title::before{
+    background-image: url(../img/mail.svg);
+    background-repeat: no-repeat;
+    height: 38px;
+    top: 11px;
+  }
+  form{
+    margin-top: 20px;
+    width: 100%;
+    .sample{
+      color: $gray;
+      font-size: 10px;
+      @include breakpoint(tablet){
+        font-size: 14px;
+      }
+      @include breakpoint(pc){
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+div.wpcf7 p { 
+  margin-top: 10px;
+  font-size:12px; 
+  box-sizing: border-box;
+  @include breakpoint(tablet){
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  @include breakpoint(pc){
+    font-size: 20px;
+  }
+}
+div.wpcf7 input, .wpcf7 textarea { 
+  background-color: rgba(61,90,128,0.19);
+  padding:8px 0; 
+  font-size:14px;
+  box-sizing: border-box;
+  border: none;
+  margin-top: 8px;
+  width: 100%;
+}
+
+div.wpcf7 input.wpcf7-submit{
+  background-color: #fff;
+  color: $gray;
+  border: 3px solid $gray;
+  width: 70%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  font-size: 12px;
+  max-width: 300px;
+  -webkit-appearance: none;
+  @include breakpoint(tablet){
+    font-size: 16px;
+  }
+  @include breakpoint(pc){
+    font-size: 20px;
+  }
+}
+ 
+
+.wpcf7 form.sent .wpcf7-response-output{
+  border: none;
+  color: #333;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output{
+  border: none;
+}
+ 
+/* エラー個所をわかりやすく表示 */
+.wpcf7 .wpcf7-not-valid { background: #ffb6c1; }
+.wpcf7 span.wpcf7-not-valid-tip {font-size: 80%;}
+.wpcf7 .wpcf7-response-output {margin: 10px 0 0; padding: 8px 35px 8px 14px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.wpcf7 .wpcf7-validation-errors {color: #B94A48; background-color: #F2DEDE; border: 1px solid #EED3D7;}
+.wpcf7 .wpcf7-mail-sent-ok {color: #3A87AD; background-color: #D9EDF7; border: 1px solid #BCE8F1;}
+ 
+/* 必須赤色表示 */
+.wpcf7 .required { 
+  color: #f00;
+  font-size: 12px;
+  @include breakpoint(tablet){
+    font-size: 16px;
+  }
+  @include breakpoint(pc){
+    font-size: 20px;
+  }
+}
+/* 任意緑色表示 */
+.wpcf7 .any{ 
+  color: #080;
+  @include breakpoint(tablet){
+    font-size: 16px;
+  }
+  @include breakpoint(pc){
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,114 @@
+.p-works {
+  text-align: center;
+  margin-top: 40px;
+  @include breakpoint(tablet){
+    margin-top: 65px;
+  }
+  @include breakpoint(pc){
+    margin-top: 120px;
+  }
+  &__title {
+    &::after {
+      content: "Works";
+      color: $blue;
+    }
+    &::before {
+      background-image: url(../img/html.svg);
+    }
+  }
+  &-card{
+    box-sizing: border-box;
+    width: 45%;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    &:nth-of-type(n+3){
+      margin-top: 20px;
+    }
+    &:nth-of-type(2){
+      @include breakpoint(tablet){
+        margin-top: 0;
+      }
+    }
+    &__inner{
+      padding: 10px;
+    }
+    &__wrap {
+      padding: 20px 14px 0 14px;
+      @include breakpoint(tablet){
+        padding: 40px 11px 0 11px;
+      }
+      @include breakpoint(pc){
+        padding: 60px 26px 0 26px;
+      }
+    }
+    &__img {
+      width: 100%;
+      display: block;
+      transition: all 0.5s;
+      &:hover{
+        transform: translateY(-10px);
+        transition: all 0.5s;
+      }
+    }
+    &__title{
+      text-align: left;
+      margin-top: 10px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $blue;
+        transition: width 1s;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+    &__schedule{
+      text-align: left;
+    }
+    &__button {
+      display: block;
+      margin: 15px auto 0;
+      >a {
+        padding: 7px 19px 7px 15px;
+        font-size: 12px;
+        @include breakpoint(tablet){
+          font-size: 12px;
+          padding: 9px 23px 9px 18px;
+        }
+        @include breakpoint(pc){
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  &__archive-button{
+    margin: 20px auto 0;
+    &>a{
+      padding: 12px 32px 12px 28px;
+      display: block;
+      font-size: 12px;
+      @include breakpoint(tablet){
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* アニメーション前 */
+.scrool{
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+/* トリガー発火でis-activeを付与 */
+.scrool.is-active{
+  transition: .6s;
+  transform: translateY(0);
+  opacity: 1;
+}

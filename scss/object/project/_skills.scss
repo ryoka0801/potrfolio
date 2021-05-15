@@ -1,0 +1,55 @@
+.p-skills{
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  @include breakpoint(tablet){
+    margin-top: 50px;
+  }
+  @include breakpoint(pc){
+    padding: 30px;
+  }
+  &__title {
+    &::after{
+      content: "Skills";
+      color: $blue;
+    }
+    &::before{
+      background-image: url(../img/ankert.svg);
+    }
+  }
+  &__list {
+    margin-top: 37px;
+  }
+  &__button>a{
+    padding: 7px 16px 7px 11px;
+    display: block;
+    font-size: 10px;
+    @include breakpoint(tablet){
+      font-size: 16px;
+      padding: 13px 26px 13px 21px;
+    }
+    &::after{
+      top: 48.5%;
+    }
+  }
+  &__button-wrap{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    @include breakpoint(tablet){
+      margin-top: 20px;
+    }
+    @include breakpoint(pc){
+      margin-top: 30px;
+    }
+  }
+  &__more {
+    font-weight: bolder;
+    color: $gray;
+    line-height: 2.9;
+    position: relative;
+    @include breakpoint(tablet){
+      font-size: 16px;
+    }
+  }
+}

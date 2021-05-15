@@ -1,0 +1,64 @@
+.p-price{
+  padding-top: 40px;
+  @include breakpoint(tablet){
+    padding-top: 50px;
+  }
+  @include breakpoint(pc){
+    padding-top: 120px;
+  }
+  &__title{
+    @extend.p-archive__title;
+    @include breakpoint(wide){
+      padding: 0 200px;
+    }
+  }
+  &__table{
+    margin: 20px auto 0;
+    width: 100%;
+    text-align: center;
+    @include breakpoint(tablet){
+      padding-top: 25px;
+    }
+    @include breakpoint(pc){
+      padding-top: 60px;
+    }
+    &:hover td{
+      color: #333;
+	    background-color: rgba(39,69,108,0.13);
+    }
+    &-head{
+      background-color: rgba(86,144,221,0.25);
+      color: $gray;
+      border: 1px solid #333;
+      padding: 10px;
+	    transition: 0.2s;
+      vertical-align: middle;
+      @include breakpoint(tablet){
+        font-size: 14px;
+      }
+      @include breakpoint(pc){
+        font-size: 20px;
+      }
+    }
+    &-item{
+      border: 1px solid #333;
+      padding: 10px;
+	    transition: 0.2s;
+      vertical-align: middle;
+      @include breakpoint(tablet){
+        font-size: 14px;
+      }
+      @include breakpoint(pc){
+        font-size: 20px;
+      }
+      &:first-of-type{
+        text-align: left;
+      }
+    }
+  }
+}
+
+tbody:hover tr:hover td {
+	color: $gray;
+	background-color: #fff;
+}

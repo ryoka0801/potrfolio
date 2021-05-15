@@ -1,0 +1,59 @@
+.c-list{
+  border: solid 2px $blue;
+  padding: 8px;
+  padding-top: 0;
+  position: relative;
+  text-align: left;
+  @include breakpoint(tablet){
+    padding: 0 12px 12px 12px;
+    margin-top: 64px;
+  }
+  @include breakpoint(pc){
+    width: 70%;
+    margin: 64px auto 0;
+  }
+  &::before {
+    content: "Skills";
+    background: $blue;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    left: -2px;
+    bottom: 100%;
+    padding: 2px 5px;
+    letter-spacing: 0.05em;
+    @include breakpoint(tablet){
+      font-size: 16px;
+    }
+    @include breakpoint(pc){
+      font-size: 20px;
+    }
+  }
+  li{
+    line-height: 1.7;
+    padding: 6px 5px 0px 5px;
+    border-bottom: dashed 1px $blue;
+    list-style-type: none;
+    position: relative;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    color: $gray;
+    @include breakpoint(tablet){
+      font-size: 16px;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: 1.2em;
+      left: -10px;
+      transform: rotate(45deg) translateY(-50%);
+      width: 5px;
+      height: 5px;
+      border-width: 2px 2px 0 0;
+      border-style: solid;
+      border-color: $gray;
+      transition: 1.5s;
+      
+    }
+  }
+}

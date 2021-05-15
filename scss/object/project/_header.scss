@@ -1,0 +1,144 @@
+.p-navi-menu__trigger,
+.p-navi-menu__trigger span {
+  display: inline-block;
+  transition: all 1s;
+  box-sizing: border-box;
+}
+
+.p-navi-menu {
+  position: relative;
+  text-align: right;
+  &__trigger {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    width: 25px;
+    height: 21px;
+    background: none;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    @include breakpoint(pc){
+      display: none;
+    }
+    span {
+      position: absolute;
+      left: 0;
+      width: 25px;
+      height: 1px;
+      background-color: #fff;
+      border-radius: 4px;
+      &:nth-of-type(1) {
+        top: 0;
+      }
+      &:nth-of-type(2) {
+        top: calc(50% - 0.5px);
+      }
+      &:nth-of-type(3) {
+        bottom: 0;
+      }
+    }
+    // 閉じるボタン
+    .is-open {
+      &:nth-of-type(1) {
+        transform: translateY(10px) rotate(-45deg);
+      }
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+      &:nth-of-type(3) {
+        transform: translateY(-10px) rotate(45deg);
+      }
+    }
+  }
+  &__list {
+    position: absolute;
+    left: -100vw;
+    text-align: left;
+    transition: 2s all;
+    @include breakpoint(pc){
+      position: initial;
+    }
+    &.slide {
+      left: 0;
+      transition: 0.5s all ease-out;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  &__item {
+    text-decoration: none;
+    display: block;
+    padding: 20px 0;
+    margin: 10px 0;
+    @include breakpoint(pc){
+      padding: 10px 0;
+      margin-top: 30px;
+    }
+    >li {
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+}
+
+.p-header{
+  width: 100%;
+  box-sizing: border-box;
+  transition: 1s all ease-in-out;
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+  @include breakpoint(pc){
+    padding: 20px;
+  }
+}
+.open {
+  width: 100vw;
+  padding-left: 30px;
+  transition: 0.5s all ease-in-out;
+  @include breakpoint(tablet){
+    padding-left: 50px;
+  }
+}
+
+.isAnimate{
+  position: fixed;
+  top: 0;
+}
+
+.menu-item{
+  text-decoration: none;
+  display: block;
+  margin: 10px 0;
+  @include breakpoint(pc){
+    margin-top: 30px;
+  }
+  >a{
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    padding: 20px 0;
+    position: relative;
+    @include breakpoint(pc){
+      padding: 10px 0;
+    }
+    &:hover::after{
+      width: 100%;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 17px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: rgba(255,255,255,0.5);
+      transition: width 0.3s;
+      @include breakpoint(pc){
+        bottom: 7px;
+      }
+    }
+  }
+}

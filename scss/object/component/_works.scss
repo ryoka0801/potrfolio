@@ -1,0 +1,32 @@
+.c-works{
+  width: 45%;
+  &__text{
+    margin-top: 1em;
+    >h2{
+      margin-top: 0.5em;
+      font-size: 10px;
+      color: $gray;
+      @include breakpoint(tablet){
+        font-size: 14px;
+        margin-top: 1em;
+      }
+      @include breakpoint(pc){
+        font-size: 20px;
+        margin-top: 1em;
+      }
+    }
+    >p ,li{
+      margin-left: 1em;
+      margin-top: 0.5em;
+      font-size: 10px;
+      color: $gray;
+      @include breakpoint(tablet){
+        font-size: 12px;
+      }
+      @include breakpoint(pc){
+        font-size: 18px;
+        margin-top: 1em;
+      }
+    }
+  }
+}

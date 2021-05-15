@@ -1,0 +1,23 @@
+.c-text {
+  font-size: 10px;
+  color: #303030;
+  line-height: 1.4;
+  word-break: keep-all;
+  letter-spacing: 0.02em;
+  word-wrap: break-word;
+  @include breakpoint(tablet){
+    font-size: 16px;
+  }
+  @include breakpoint(pc){
+    font-size: 24px;
+  }
+  span {
+    word-wrap: normal;
+    @include breakpoint(tablet){
+      font-size: 16px;
+    }
+    @include breakpoint(pc){
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.c-site-head{
+  text-align: center;
+  padding: 0 10px;
+  @include breakpoint(tablet){
+    padding: 0 50px;
+  }
+  @include breakpoint(wide){
+    padding: 0 100px;
+  }
+}

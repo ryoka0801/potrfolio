@@ -1,0 +1,31 @@
+.c-site-title {
+  font-size: 18px;
+  font-weight: bolder;
+  color: $gray;
+  display: inline-block;
+  border-left: 4px solid $blue;
+  padding-left: 3px;
+  @include breakpoint(tablet){
+    font-size: 24px;
+    padding-left: 7px;
+  }
+  @include breakpoint(pc){
+    font-size: 32px;
+  }
+  &__desc{
+    font-size: 12px;
+    font-weight: 200;
+    margin-top: 13px;
+    text-align: center;
+    word-break: keep-all;
+    letter-spacing: 0.02em;
+    word-wrap: break-word;
+    color: $gray;
+    @include breakpoint(tablet){
+      font-size: 16px;
+    }
+    @include breakpoint(pc){
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.p-check{
+  text-align: center;
+  margin-top: 40px;
+  padding: 0 19px;
+  @include breakpoint(tablet){
+    margin-top: 50px;
+    padding: 0 21px;
+  }
+  @include breakpoint(pc){
+    padding: 30px;
+  }
+  &__title {
+    &::after{
+      content: "Check";
+      color: $blue;
+    }
+    &::before{
+      background-image: url(../img/pen.svg);
+    }
+  }
+  &__desc{
+    margin-top: 0.5em;
+  }
+  &__list{
+    margin-top: 20px;
+    text-align: left;
+    @include breakpoint(tablet){
+      margin-top: 40px;
+    }
+    @include breakpoint(pc){
+      padding: 0 170px;
+    }
+  }
+  &__item{
+    font-size: 10px;
+    color: $gray;
+    position: relative;
+    margin-top: 1em;
+    @include breakpoint(tablet){
+      font-size: 16px;
+    }
+    @include breakpoint(pc){
+      font-size: 20px;
+    }
+    &::before{
+      background-image: url(../img/checklist.svg);
+      width: 15px;
+      height: 15px;
+      top: -2px;
+      left: -17px;
+      @include breakpoint(tablet){
+        left: -20px;
+      }
+      @include breakpoint(pc){
+        width: 25px;
+        height: 25px;
+        left: -27px;
+      }
+    }
+  }
+}
+
+#slide{
+  transform: translateX(80px);
+  opacity: 0;
+}
+
+/* トリガー発火でis-activeを付与 */
+.is-active #slide{
+  transition: .6s;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.is-active #slide:nth-child(2){transition-delay: .4s;}
+.is-active #slide:nth-child(3){transition-delay: .8s;}
+.is-active #slide:nth-child(4){transition-delay: 1.2s;}
+.is-active #slide:nth-child(5){transition-delay: 1.6s;}
+.is-active #slide:nth-child(6){transition-delay: 2s;}

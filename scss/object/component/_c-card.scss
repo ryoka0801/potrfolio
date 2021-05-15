@@ -1,0 +1,24 @@
+.c-card {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  >a{
+    display: block;
+  }
+  &__img {
+    object-fit: cover;
+  }
+  &__title {
+    font-size: 12px;
+    line-height: 1.6;
+    color: $gray;
+    @include breakpoint(pc){
+      font-size: 18px
+    }
+  }
+  &__schedule{
+    @extend .c-card__title;
+  }
+}

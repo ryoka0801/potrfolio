@@ -1,0 +1,64 @@
+.p-about {
+  position: relative;
+  padding: 75px 10px 12px 10px;
+  @include breakpoint(tablet){
+    padding: 181px 116px 56px 116px;
+  }
+  @include breakpoint(pc){
+    padding: 200px 80px 71px 80px;
+  }
+  @include breakpoint(wide){
+    padding: 248px 96px 71px 96px;
+  }
+  &__img {
+    width: 63px;
+    height: 79px;
+    position: absolute;
+    object-fit: cover;
+    object-position: 20%;
+    box-shadow: 0 0 4px;
+    top: -20px;
+    left: 30px;
+    @include breakpoint(tablet){
+      top: -47px;
+      left: 116px;
+      width: 16.8vw;
+      height: 21.06vw;
+    }
+    @include breakpoint(pc){
+      left: 80px;
+      max-width: 200px;
+      max-height: 250px;
+    }
+    @include breakpoint(wide){
+      left: 10vw;
+    }
+  }
+  &__title {
+    position: absolute;
+    top: 40px;
+    right: 14.93vw;
+    font-weight: bolder;
+    color: #303030;
+    &::before{
+      background-image: url(../img/human-blue.svg);
+      top: -7px;
+      @include breakpoint(tablet){
+        top: -11px;
+      }
+    }
+    @include breakpoint(tablet){
+      font-size: 24px;
+      top: 90px;
+      right: 116px;
+    }
+    @include breakpoint(pc) {
+      right: 80px;
+    }
+    @include breakpoint(wide){
+      top: 105px;
+      right: 171px;
+      font-size: 32px;
+    }
+  }
+}
